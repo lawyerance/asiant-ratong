@@ -12,8 +12,6 @@ repositories {
 }
 
 dependencies {
-    implementation libraries.slf4j
-
     compileOnly(project(":netty-http-proxy:http-interceptor"))
 
     implementation(libraries.netty)
