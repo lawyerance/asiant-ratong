@@ -1,0 +1,34 @@
+plugins {
+    id 'java'
+}
+
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    implementation(libraries.netty)
+
+    compile project(":netty-http-proxy:http-interceptor")
+
+    implementation(libraries.logback)
+}
+
+jar {
+    manifest {
+        attributes(
+                "Implementation-Title": project.name,
+                "Implementation-Version": project.version
+        )
+    }
+    exclude("logback.xml")
+}
+
+copySpec {
+    from 'source'
+    into 'destination'
+    //an example of excluding files from certain configuration:
+    exclude { it.file in configurations.someConf.files }
+}

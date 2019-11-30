@@ -1,0 +1,7 @@
+allprojects {
+    apply from: rootProject.file("gradle/dependencies.gradle")
+
+    group "pers.lyks.asiant"
+    version "1.0.0-SNAPSHOT"
+
+}

@@ -1,0 +1,30 @@
+ext.libraries = [
+        slf4j  : [
+                dependencies.create("org.slf4j:slf4j-api:$slf4jVersion") {
+                    force = true
+                }
+        ],
+
+        jupiter: [
+                dependencies.create("org.junit.jupiter:junit-jupiter-api:$jupiterVersion") {
+                    force = true
+                },
+                dependencies.create("org.junit.platform:junit-platform-launcher:$junitLauncherVersion") {
+                    force = true
+                },
+                dependencies.create("org.junit.jupiter:junit-jupiter-engine:$jupiterVersion") {
+                    force = true
+                },
+                dependencies.create("org.junit.vintage:junit-vintage-engine:$jupiterVersion") {
+                    force = true
+                }
+        ],
+        netty  : [
+                dependencies.create("io.netty:netty-codec-http:$nettyVersion") {
+                    force = true
+                }
+        ],
+        logback: [
+                dependencies.create("ch.qos.logback:logback-classic:$logbackVersion")
+        ]
+]

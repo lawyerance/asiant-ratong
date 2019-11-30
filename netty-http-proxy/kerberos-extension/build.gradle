@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'pers.lyks.asiant'
+version '1.0.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation libraries.slf4j
+
+    compileOnly(project(":netty-http-proxy:http-interceptor"))
+
+    implementation(libraries.netty)
+
+}
