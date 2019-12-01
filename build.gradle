@@ -53,7 +53,7 @@ subprojects {
             }
             into("bin") {
                 fileMode(0755)
-                from("bin")
+                from("scripts")
             }
         }
     }

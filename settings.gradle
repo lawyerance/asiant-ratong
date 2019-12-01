@@ -1,6 +1,5 @@
 rootProject.name = 'asiant-ratong'
 
-include 'netty-http-proxy'
 include 'netty-http-proxy:http-interceptor'
 include 'netty-http-proxy:kerberos-extension'
 include 'netty-http-proxy:proxy-application'
