@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+group 'pers.lyks.asiant'
+version '1.0.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-gateway', version: '2.2.0.RELEASE'
+
+    compile group: 'org.springframework.security', name: 'spring-security-core', version: '5.2.0.RELEASE'
+
+}

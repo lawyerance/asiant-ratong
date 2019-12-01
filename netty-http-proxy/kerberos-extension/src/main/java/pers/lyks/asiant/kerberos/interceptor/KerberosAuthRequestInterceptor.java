@@ -3,8 +3,8 @@ package pers.lyks.asiant.kerberos.interceptor;
 import io.netty.handler.codec.http.FullHttpRequest;
 import io.netty.handler.codec.http.HttpHeaderNames;
 import org.ietf.jgss.GSSException;
-import pers.lyks.asiant.kerberos.krb.SpnegoContext;
 import pers.lyks.asiant.netty.http.FullHttpRequestInterceptor;
+import pers.lyks.kerberos.auth.SpnegoContext;
 
 import java.io.IOException;
 import java.security.PrivilegedActionException;

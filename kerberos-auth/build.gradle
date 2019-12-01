@@ -12,11 +12,5 @@ repositories {
 }
 
 dependencies {
-
-    implementation(project(":kerberos-auth"))
-
-    compileOnly(project(":netty-http-proxy:http-interceptor"))
-
-    implementation(libraries.netty)
-
+    testCompile group: 'junit', name: 'junit', version: '4.12'
 }

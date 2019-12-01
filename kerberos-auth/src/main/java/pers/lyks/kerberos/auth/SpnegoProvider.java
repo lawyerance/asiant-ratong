@@ -1,4 +1,4 @@
-package pers.lyks.asiant.kerberos.krb;
+package pers.lyks.kerberos.auth;
 
 
 import org.ietf.jgss.GSSException;
@@ -17,9 +17,6 @@ import java.net.URL;
  * @version 1.0 2019-11-27
  */
 public final class SpnegoProvider {
-    /**
-     * Default LOGGER.
-     */
     private static final Logger logger = LoggerFactory.getLogger(SpnegoProvider.class);
 
     /**
@@ -27,14 +24,11 @@ public final class SpnegoProvider {
      */
     public static final GSSManager GSS_MANAGER = GSSManager.getInstance();
 
-    public static final String SPNEGO_MECHANISM = "1.3.6.1.5.5.2";
-    public static final String KERBEROS_MECHANISM = "1.2.840.113554.1.2.2";
-    public static final String LEGACY_KERBEROS_MECHANISM = "1.2.840.48018.1.2.2";
-
     /**
      * GSS-API mechanism "1.3.6.1.5.5.2".
      */
     public static final Oid SPNEGO_OID = SpnegoProvider.getSpnegoOid();
+
     /**
      * GSS-API mechanism "1.2.840.113554.1.2.2".
      */
@@ -54,6 +48,8 @@ public final class SpnegoProvider {
         // default private
     }
 
+    private static final String SPNEGO_MECHANISM = "1.3.6.1.5.5.2";
+
     /**
      * Returns the Universal Object Identifier representation of
      * the SPNEGO mechanism.
@@ -69,6 +65,9 @@ public final class SpnegoProvider {
         }
         return oid;
     }
+
+
+    private static final String KERBEROS_MECHANISM = "1.2.840.113554.1.2.2";
 
     /**
      * Returns the Universal Object Identifier representation of

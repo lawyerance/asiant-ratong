@@ -1,5 +1,13 @@
 rootProject.name = 'asiant-ratong'
 
+include 'kerberos-auth'
+
+include 'netty-http-proxy'
 include 'netty-http-proxy:http-interceptor'
 include 'netty-http-proxy:kerberos-extension'
 include 'netty-http-proxy:proxy-application'
+
+include 'spring:spring-cloud-gateway'
+include 'spring:spring-cloud-gateway'
+
+
