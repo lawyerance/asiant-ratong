@@ -11,6 +11,9 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
+import javax.annotation.Resource;
+import javax.security.auth.login.Configuration;
+
 /**
  * @author lawyerance
  * @version 1.0 2019-12-01
@@ -19,6 +22,8 @@ import reactor.core.publisher.Mono;
 public class KerberosAuthenticateGlobalFilter implements GlobalFilter, Ordered {
     private static final Logger logger = LoggerFactory.getLogger(KerberosAuthenticateGlobalFilter.class);
 
+    @Resource
+    private Configuration configuration;
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {

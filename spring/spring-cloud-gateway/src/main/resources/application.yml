@@ -1,2 +1,6 @@
 server:
   port: 8081
+spring:
+  kerberos:
+    login-module:
+      control-flag:

@@ -1,0 +1,178 @@
+{
+  "groups": [
+    {
+      "name": "spring.kerberos",
+      "type": "pers.lyks.asiant.autocofigure.krb.KerberosProperties",
+      "sourceType": "pers.lyks.asiant.autocofigure.krb.KerberosProperties"
+    },
+    {
+      "name": "spring.kerberos.login-module",
+      "type": "pers.lyks.asiant.autocofigure.krb.KerberosProperties",
+      "sourceType": "pers.lyks.asiant.autocofigure.krb.KerberosProperties$LoginModuleProperty",
+      "sourceMethod": "getLoginModule()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "spring.kerberos.login-type",
+      "sourceType": "pers.lyks.asiant.autocofigure.krb.KerberosProperties",
+      "description": "The type support with kerberos authentication.",
+      "defaultValue": "client-config"
+    },
+    {
+      "name": "spring.kerberos.client-config",
+      "type": "java.lang.String",
+      "sourceType": "pers.lyks.asiant.autocofigure.krb.KerberosProperties",
+      "description": "The path of using client configuration file for authentication."
+    },
+    {
+      "name": "spring.kerberos.login-module.name",
+      "type": "java.lang.String",
+      "sourceType": "pers.lyks.asiant.autocofigure.krb.KerberosProperties$LoginModuleProperty",
+      "description": "The custom login-module configuration, the login module name.",
+      "defaultValue": "com.sun.security.auth.module.Krb5LoginModule"
+    },
+    {
+      "name": "spring.kerberos.login-module.control-flag",
+      "type": "java.lang.String",
+      "sourceType": "pers.lyks.asiant.autocofigure.krb.KerberosProperties$LoginModuleProperty",
+      "description": "The custom login-module configuration, the login module control flag.",
+      "defaultValue": "required"
+    },
+    {
+      "name": "spring.kerberos.login-module.store-key",
+      "type": "java.lang.Boolean",
+      "sourceType": "pers.lyks.asiant.autocofigure.krb.KerberosProperties$LoginModuleProperty",
+      "description": "The custom login-module configuration, whether store key.",
+      "defaultValue": false
+    },
+    {
+      "name": "spring.kerberos.login-module.do-not-prompt",
+      "type": "java.lang.Boolean",
+      "sourceType": "pers.lyks.asiant.autocofigure.krb.KerberosProperties$LoginModuleProperty",
+      "description": "The custom login-module configuration, whether do or not prompt.",
+      "defaultValue": false
+    },
+    {
+      "name": "spring.kerberos.login-module.use-ticket-cache",
+      "type": "java.lang.Boolean",
+      "sourceType": "pers.lyks.asiant.autocofigure.krb.KerberosProperties$LoginModuleProperty",
+      "description": "The custom login-module configuration, whether use ticket cache.",
+      "defaultValue": false
+    },
+    {
+      "name": "spring.kerberos.login-module.use-key-tab",
+      "type": "java.lang.Boolean",
+      "sourceType": "pers.lyks.asiant.autocofigure.krb.KerberosProperties$LoginModuleProperty",
+      "description": "The custom login-module configuration, whether use debug.",
+      "defaultValue": false
+    },
+    {
+      "name": "spring.kerberos.login-module.ticket-cache-name",
+      "type": "java.lang.String",
+      "sourceType": "pers.lyks.asiant.autocofigure.krb.KerberosProperties$LoginModuleProperty",
+      "description": "The custom login-module configuration, the name of ticket cache."
+    },
+    {
+      "name": "spring.kerberos.login-module.key-tab-name",
+      "type": "java.lang.String",
+      "sourceType": "pers.lyks.asiant.autocofigure.krb.KerberosProperties$LoginModuleProperty",
+      "description": "The custom login-module configuration, the name of key-tab."
+    },
+    {
+      "name": "spring.kerberos.login-module.principal",
+      "type": "java.lang.String",
+      "sourceType": "pers.lyks.asiant.autocofigure.krb.KerberosProperties$LoginModuleProperty",
+      "description": "The custom login-module configuration, the authentication principal name."
+    },
+    {
+      "name": "spring.kerberos.login-module.use-first-pass",
+      "type": "java.lang.Boolean",
+      "sourceType": "pers.lyks.asiant.autocofigure.krb.KerberosProperties$LoginModuleProperty",
+      "description": "The custom login-module configuration, whether use first pass.",
+      "defaultValue": false
+    },
+    {
+      "name": "spring.kerberos.login-module.try-first-pass",
+      "type": "java.lang.Boolean",
+      "sourceType": "pers.lyks.asiant.autocofigure.krb.KerberosProperties$LoginModuleProperty",
+      "description": "The custom login-module configuration, whether try first pass.",
+      "defaultValue": false
+    },
+    {
+      "name": "spring.kerberos.login-module.store-pass",
+      "type": "java.lang.Boolean",
+      "sourceType": "pers.lyks.asiant.autocofigure.krb.KerberosProperties$LoginModuleProperty",
+      "description": "The custom login-module configuration, whether store pass.",
+      "defaultValue": false
+    },
+    {
+      "name": "spring.kerberos.login-module.clear-pass",
+      "type": "java.lang.Boolean",
+      "sourceType": "pers.lyks.asiant.autocofigure.krb.KerberosProperties$LoginModuleProperty",
+      "description": "The custom login-module configuration, whether clear pass.",
+      "defaultValue": false
+    },
+    {
+      "name": "spring.kerberos.login-module.refresh",
+      "type": "java.lang.Boolean",
+      "sourceType": "pers.lyks.asiant.autocofigure.krb.KerberosProperties$LoginModuleProperty",
+      "description": "The custom login-module configuration, whether refresh kerberos config",
+      "defaultValue": false
+    },
+    {
+      "name": "spring.kerberos.login-module.renew",
+      "type": "java.lang.Boolean",
+      "sourceType": "pers.lyks.asiant.autocofigure.krb.KerberosProperties$LoginModuleProperty",
+      "description": "The custom login-module configuration, whether new TGT.",
+      "defaultValue": false
+    },
+    {
+      "name": "spring.kerberos.login-module.initiator",
+      "type": "java.lang.Boolean",
+      "sourceType": "pers.lyks.asiant.autocofigure.krb.KerberosProperties$LoginModuleProperty",
+      "description": "The custom login-module configuration, whether is or not initiator.",
+      "defaultValue": true
+    }
+  ],
+  "hits": [
+    {
+      "name": "spring.kerberos.login-type",
+      "values": [
+        {
+          "value": "client-config"
+        },
+        {
+          "value": "login-module"
+        }
+      ],
+      "providers": [
+        {
+          "name": "client-config"
+        }
+      ]
+    },
+    {
+      "name": "spring.kerberos.login-module.control-flag",
+      "values": [
+        {
+          "value": "required"
+        },
+        {
+          "value": "requisite"
+        },
+        {
+          "value": "sufficient"
+        },
+        {
+          "value": "optional"
+        }
+      ],
+      "providers": [
+        {
+          "name": "required"
+        }
+      ]
+    }
+  ]
+}

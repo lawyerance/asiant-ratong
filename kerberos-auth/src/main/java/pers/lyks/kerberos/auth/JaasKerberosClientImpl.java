@@ -1,7 +1,6 @@
 package pers.lyks.kerberos.auth;
 
 
-import com.sun.istack.internal.Nullable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pers.lyks.kerberos.util.JaasUtils;
@@ -71,7 +70,7 @@ public class JaasKerberosClientImpl implements KerberosClient {
             }
 
             return new AppConfigurationEntry[]{new AppConfigurationEntry("com.sun.security.auth.module.Krb5LoginModule",
-                    AppConfigurationEntry.LoginModuleControlFlag.REQUIRED, options),};
+                AppConfigurationEntry.LoginModuleControlFlag.REQUIRED, options),};
         }
 
     }
@@ -81,7 +80,7 @@ public class JaasKerberosClientImpl implements KerberosClient {
         private String username;
         private String password;
 
-        public KerberosClientCallbackHandler(String username, @Nullable String password) {
+        public KerberosClientCallbackHandler(String username, String password) {
             this.username = username;
             this.password = password;
         }
@@ -96,7 +95,7 @@ public class JaasKerberosClientImpl implements KerberosClient {
                     pwcb.setPassword(password.toCharArray());
                 } else {
                     throw new UnsupportedCallbackException(callback, "We got a " + callback.getClass().getCanonicalName()
-                            + ", but only NameCallback and PasswordCallback is supported");
+                        + ", but only NameCallback and PasswordCallback is supported");
                 }
             }
 
