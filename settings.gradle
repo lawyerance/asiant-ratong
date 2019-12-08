@@ -9,5 +9,5 @@ include 'netty-http-proxy:proxy-application'
 
 include 'spring:spring-cloud-gateway'
 include 'spring:spring-cloud-gateway'
-
+include 'http-client'
 

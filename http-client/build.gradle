@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+}
+
+group 'pers.lyks.asiant'
+version '1.0.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation(libraries.httpclient)
+
+    implementation(libraries.groovy)
+
+    implementation(libraries.logback)
+}

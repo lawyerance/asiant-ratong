@@ -1,11 +1,11 @@
 ext.libraries = [
-        slf4j  : [
+        slf4j       : [
                 dependencies.create("org.slf4j:slf4j-api:$slf4jVersion") {
                     force = true
                 }
         ],
 
-        jupiter: [
+        jupiter     : [
                 dependencies.create("org.junit.jupiter:junit-jupiter-api:$jupiterVersion") {
                     force = true
                 },
@@ -19,12 +19,22 @@ ext.libraries = [
                     force = true
                 }
         ],
-        netty  : [
+        netty       : [
                 dependencies.create("io.netty:netty-codec-http:$nettyVersion") {
                     force = true
                 }
         ],
-        logback: [
+        logback     : [
                 dependencies.create("ch.qos.logback:logback-classic:$logbackVersion")
+        ],
+        "groovy"    : [
+                dependencies.create("org.codehaus.groovy:groovy-all:$groovyVersion") {
+                    force = true
+                }
+        ],
+        "httpclient": [
+                dependencies.create("org.apache.httpcomponents:httpclient:$httpclientVersion") {
+                    force = true
+                }
         ]
 ]
