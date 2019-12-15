@@ -13,7 +13,9 @@ repositories {
 
 dependencies {
 
-    implementation(project(":kerberos-auth"))
+//    implementation(project(":kerberos-api"))
+
+    implementation("pers.lyks.asiant:kerberos-api:1.0.0-SNAPSHOT")
 
     compileOnly(project(":netty-http-proxy:http-interceptor"))
 

@@ -1,6 +1,6 @@
 package pers.lyks.kerberos.client;
 
-import pers.lyks.kerberos.auth.KerberosClient;
+import pers.lyks.kerberos.api.KerberosClient;
 
 /**
  * @author lawyerance

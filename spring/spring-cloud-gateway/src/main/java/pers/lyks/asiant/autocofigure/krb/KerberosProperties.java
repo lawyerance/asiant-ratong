@@ -2,7 +2,7 @@ package pers.lyks.asiant.autocofigure.krb;
 
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import pers.lyks.kerberos.client.Krb5Property;
+import pers.lyks.kerberos.api.Krb5Property;
 
 import javax.security.auth.login.AppConfigurationEntry;
 
@@ -16,6 +16,11 @@ public class KerberosProperties implements InitializingBean {
     private String clientConfig;
     private final LoginModuleProperty loginModule = new LoginModuleProperty();
 
+
+    public AppConfigurationEntry buildAppConfigurationEntry() {
+        return new AppConfigurationEntry(loginModule.name, loginModule.controlFlag.getControlFlag(), loginModule.buildOptions());
+    }
+
     @Override
     public void afterPropertiesSet() throws Exception {
 
@@ -26,17 +31,10 @@ public class KerberosProperties implements InitializingBean {
         private String name = "com.sun.security.auth.module.Krb5LoginModule";
         private ControlFlag controlFlag;
 
-        public String getName() {
-            return name;
-        }
-
         public void setName(String name) {
             this.name = name;
         }
 
-        public ControlFlag getControlFlag() {
-            return controlFlag;
-        }
 
         public void setControlFlag(ControlFlag controlFlag) {
             this.controlFlag = controlFlag;
@@ -79,10 +77,6 @@ public class KerberosProperties implements InitializingBean {
 
     public void setClientConfig(String clientConfig) {
         this.clientConfig = clientConfig;
-    }
-
-    public LoginModuleProperty getLoginModule() {
-        return loginModule;
     }
 
 }

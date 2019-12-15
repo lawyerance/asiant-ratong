@@ -1,4 +1,4 @@
-package pers.lyks.kerberos.auth;
+package pers.lyks.kerberos.api;
 
 import javax.security.auth.Subject;
 import java.util.HashMap;

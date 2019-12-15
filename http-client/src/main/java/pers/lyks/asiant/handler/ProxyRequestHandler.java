@@ -7,10 +7,12 @@ import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.protocol.HttpContext;
 import org.apache.http.protocol.HttpCoreContext;
 import org.apache.http.protocol.HttpRequestHandler;
+import org.apache.http.util.EntityUtils;
 
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
+import java.util.Arrays;
 
 /**
  * @author lawyerance
@@ -36,8 +38,10 @@ public class ProxyRequestHandler implements HttpRequestHandler {
 
     @Override
     public void handle(HttpRequest request, HttpResponse response, HttpContext context) throws HttpException, IOException {
+        System.out.println("Request line: " + request.getRequestLine() + ", and headers: " + Arrays.toString(request.getAllHeaders()));
         // must remove header 'Content-Length', otherwise an error will be reported like 'Content-Length header already present'
         request.removeHeaders(HttpHeaders.CONTENT_LENGTH);
+        request.setHeader("Connection", "close, TE");
 
         // renew request uri
         String newUri = target.toURI() + request.getRequestLine().getUri();
@@ -45,9 +49,11 @@ public class ProxyRequestHandler implements HttpRequestHandler {
 
         HttpCoreContext httpCoreContext = HttpCoreContext.adapt(context);
         httpCoreContext.setTargetHost(this.target);
+        EntityUtils.consume(response.getEntity());
 
         CloseableHttpResponse execute = httpClientBuilder.build().execute(builder.build(), httpCoreContext);
         HttpEntity entity = execute.getEntity();
+        System.out.println(Arrays.toString(response.getAllHeaders()));
         response.setEntity(entity);
     }
 }

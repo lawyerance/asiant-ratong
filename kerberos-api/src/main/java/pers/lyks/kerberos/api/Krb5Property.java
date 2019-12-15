@@ -1,4 +1,4 @@
-package pers.lyks.kerberos.client;
+package pers.lyks.kerberos.api;
 
 import java.util.Collections;
 import java.util.HashMap;

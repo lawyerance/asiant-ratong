@@ -31,8 +31,8 @@ public class HttpClientProxy {
 
         // Set up request handlers
         UriHttpRequestHandlerMapper requestHandlerMapper = new UriHttpRequestHandlerMapper();
-        requestHandlerMapper.register("/*", new DispatcherRequestHandler());
-//        requestHandlerMapper.register("/*", new ProxyRequestHandler(HttpClientBuilder.create(), socketAddress));
+//        requestHandlerMapper.register("/*", new DispatcherRequestHandler());
+        requestHandlerMapper.register("/*", new ProxyRequestHandler(HttpClientBuilder.create(), socketAddress));
 
         // Set up the HTTP service
         HttpService httpService = new HttpService(processor, requestHandlerMapper);

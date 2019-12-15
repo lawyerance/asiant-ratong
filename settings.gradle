@@ -1,6 +1,6 @@
 rootProject.name = 'asiant-ratong'
 
-include 'kerberos-auth'
+include 'kerberos-api'
 
 include 'netty-http-proxy'
 include 'netty-http-proxy:http-interceptor'

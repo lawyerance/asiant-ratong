@@ -4,7 +4,7 @@ import io.netty.handler.codec.http.FullHttpRequest;
 import io.netty.handler.codec.http.HttpHeaderNames;
 import org.ietf.jgss.GSSException;
 import pers.lyks.asiant.netty.http.FullHttpRequestInterceptor;
-import pers.lyks.kerberos.auth.SpnegoContext;
+import pers.lyks.kerberos.api.SpnegoContext;
 
 import java.io.IOException;
 import java.security.PrivilegedActionException;

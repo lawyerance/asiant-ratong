@@ -11,8 +11,10 @@ repositories {
 
 dependencies {
 
-    implementation(project(":kerberos-auth"))
-    
+//    implementation(project(":kerberos-api"))
+
+    implementation("pers.lyks.asiant:kerberos-api:1.0.0-SNAPSHOT")
+
     compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-gateway', version: '2.2.0.RELEASE'
 
     compile group: 'org.springframework.security', name: 'spring-security-core', version: '5.2.0.RELEASE'
